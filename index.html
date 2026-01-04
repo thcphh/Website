@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="monetag" content="34b7386e9d791f9396d661e52919edf6">
+
+<script defer id="4369387742"
+src="https://ads.maxvaluead.com/scripts/maxvalue_ads_4369387742.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSZ79DKQ14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-FSZ79DKQ14');
+</script>
+
+<title>Phim Hoạt Hình Mỗi Ngày</title>
+
+ <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">Phim Hoạt Hình Mỗi Ngày</div>
+
+  <div class="search-box">
+    <input id="searchInput" type="text" placeholder="Tìm kiếm phim, diễn viên…" autocomplete="off">
+    <div id="suggestBox" class="suggest-box"></div>
+  </div>
+
+  <div class="menu">
+    <a href="/Download/Trang%20Web/index.html" class="menu-item active">Trang chủ</a>
+    <a href="/Download/Trang%20Web/phim-le.html" class="menu-item">Phim Lẻ</a>
+    <a href="/Download/Trang%20Web/phim-bo.html" class="menu-item">Phim Bộ</a>
+
+    <div class="menu-item dropdown-btn">
+      Thể loại ▼
+      <div class="dropdown">
+        <a href="#">Hành động</a>
+        <a href="#">Kinh dị</a>
+        <a href="#">Hài hước</a>
+        <a href="#">Tình cảm</a>
+        <a href="#">Phiêu lưu</a>
+      </div>
+    </div>
+
+    <div class="menu-item dropdown-btn">
+      Quốc gia ▼
+      <div class="dropdown">
+        <a href="#">Việt Nam</a>
+        <a href="#">Hàn Quốc</a>
+        <a href="#">Trung Quốc</a>
+        <a href="#">Âu Mỹ</a>
+        <a href="#">Thái Lan</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="container">
+  <div class="title-home">Phim Hoạt Hình Mỗi Ngày</div>
+
+  <div class="movie-grid">
+    <a class="movie-card" href="/Download/Trang%20Web/Data%20trang%20chủ/doraemon-new-series/tap/1.html">
+      <img src="https://i.pinimg.com/736x/f7/aa/91/f7aa91ec120e833804ec0d38eb7dfe87.jpg">
+      <div class="movie-title">Doraemon New Series Trọn Bộ</div>
+    </a>
+
+    <a class="movie-card" href="/conan-movie/tap-1">
+      <img src="https://upload.wikimedia.org/wikipedia/vi/8/8a/Poster_Conan_movie_17.jpg">
+      <div class="movie-title">Conan Movie</div>
+    </a>
+
+    <a class="movie-card" href="/conan-long-tieng-moi-nhat/tap-1">
+      <img src="https://img.youtube.com/vi/W6wbyFqbgZI/maxresdefault.jpg">
+      <div class="movie-title">Conan Lồng Tiếng Mới Nhất</div>
+    </a>
+
+    <a class="movie-card" href="/conan-nhung-tap-phim-kinh-di/tap-1">
+      <img src="https://i.pinimg.com/736x/14/ab/c2/14abc2c2e1b932016158832ff2c1b159.jpg">
+      <div class="movie-title">Conan - Những Tập Phim Kinh Dị</div>
+    </a>
+  </div>
+</div>
+
+<!-- SEARCH + DROPDOWN SCRIPT -->
+<script>
+/* ===== SEARCH ===== */
+const movieList=[
+ {title:"Doraemon New Series Trọn Bộ",url:"/Website/doraemon-new-series-tap-1.html"},
+ {title:"Conan Movie",url:"/conan-movie/tap-1"},
+ {title:"Conan Lồng Tiếng Mới Nhất",url:"/conan-long-tieng-moi-nhat/tap-1"},
+ {title:"Conan Những Tập Phim Kinh Dị",url:"/conan-nhung-tap-phim-kinh-di/tap-1"}
+];
+
+const input=document.getElementById("searchInput");
+const box=document.getElementById("suggestBox");
+
+input.addEventListener("input",()=>{
+  const key=input.value.toLowerCase().trim();
+  box.innerHTML="";
+  if(!key){box.style.display="none";return;}
+
+  movieList.filter(m=>m.title.toLowerCase().includes(key)).forEach(m=>{
+    const div=document.createElement("div");
+    div.className="suggest-item";
+    div.textContent=m.title;
+    div.onclick=()=>location.href=m.url;
+    box.appendChild(div);
+  });
+  box.style.display="block";
+});
+
+input.addEventListener("keydown",e=>{
+  if(e.key==="Enter"){
+    const q=input.value.trim();
+    if(q) location.href="/search.html?q="+encodeURIComponent(q);
+  }
+});
+
+document.addEventListener("click",e=>{
+  if(!e.target.closest(".search-box")) box.style.display="none";
+});
+
+/* ===== DROPDOWN CLICK ===== */
+document.querySelectorAll(".dropdown-btn").forEach(btn=>{
+  btn.addEventListener("click",e=>{
+    e.stopPropagation();
+    const d=btn.querySelector(".dropdown");
+    document.querySelectorAll(".dropdown").forEach(x=>{if(x!==d)x.style.display="none";});
+    d.style.display=d.style.display==="block"?"none":"block";
+  });
+});
+document.addEventListener("click",()=>{
+  document.querySelectorAll(".dropdown").forEach(d=>d.style.display="none");
+});
+</script>
+
+<br><br>
+</body>
+</html>

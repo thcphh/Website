@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="monetag" content="34b7386e9d791f9396d661e52919edf6">
+<script defer id="4369387742" src="https://ads.maxvaluead.com/scripts/maxvalue_ads_4369387742.js"></script>
+
+<title>Phim Lẻ | Phim Hoạt Hình Mỗi Ngày</title>
+
+ <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">Phim Hoạt Hình Mỗi Ngày</div>
+  <div class="search-box">
+    <input placeholder="Tìm kiếm phim, diễn viên…">
+  </div>
+  <div class="menu">
+    <a href="/Download/Trang%20Web/index.html" class="menu-item">Trang chủ</a>
+    <a href="Download/Trang%20Web/phim-le.html" class="menu-item active">Phim Lẻ</a>
+    <a href="/Download/Trang%20Web/phim-bo.html" class="menu-item">Phim Bộ</a>
+
+    <div class="menu-item dropdown-btn">
+      Thể loại ▼
+      <div class="dropdown">
+        <a href="#">Hành động</a>
+        <a href="#">Kinh dị</a>
+        <a href="#">Hài hước</a>
+        <a href="#">Tình cảm</a>
+        <a href="#">Phiêu lưu</a>
+      </div>
+    </div>
+
+    <div class="menu-item dropdown-btn">
+      Quốc gia ▼
+      <div class="dropdown">
+        <a href="#">Việt Nam</a>
+        <a href="#">Hàn Quốc</a>
+        <a href="#">Trung Quốc</a>
+        <a href="#">Âu Mỹ</a>
+        <a href="#">Thái Lan</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="title-home">🎬 PHIM LẺ</div>
+
+  <div class="movie-grid">
+    <a class="movie-card" href="/conan-movie/tap-1">
+      <img src="https://upload.wikimedia.org/wikipedia/vi/8/8a/Poster_Conan_movie_17.jpg">
+      <div class="movie-title">Conan Movie 17</div>
+    </a>
+
+    <a class="movie-card" href="/doraemon-movie/tap-1">
+      <img src="https://i.imgur.com/Jt5ZQ9Z.jpg">
+      <div class="movie-title">Doraemon Movie</div>
+    </a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll(".dropdown-btn").forEach(btn=>{
+ btn.onclick=e=>{
+  e.stopPropagation();
+  const d=btn.querySelector(".dropdown");
+  document.querySelectorAll(".dropdown").forEach(x=>x.style.display="none");
+  d.style.display="block";
+ }
+});
+document.addEventListener("click",()=>document.querySelectorAll(".dropdown").forEach(d=>d.style.display="none"));
+</script>
+
+</body>
+</html>

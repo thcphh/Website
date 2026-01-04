@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Doraemon New Series – Tập 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- CSS -->
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!-- ===== VIDEO ===== -->
+<div class="video-wrapper">
+  <div class="player-box">
+
+    <div class="poster" id="poster"></div>
+    <div class="play-btn" id="playBtn"></div>
+
+    <iframe
+      id="videoFrame"
+      src="https://short.icu/EwWYYrsBs"
+      allow="autoplay; fullscreen; encrypted-media"
+      allowfullscreen
+      scrolling="no">
+    </iframe>
+
+  </div>
+</div>
+
+<!-- ===== THÔNG TIN + PHÂN LOẠI + DANH SÁCH TẬP ===== -->
+<div class="movie-wrap">
+
+  <h1>Doraemon New Series</h1>
+  <p>Anime • 2025 • ⭐ 9.1</p>
+
+  <h3>Phân loại</h3>
+  <div class="ep-groups">
+    <a class="group-btn ep-active" href="#">Không Vietsub</a>
+    <a class="group-btn" href="/Download/Trang%20Web/Data%20trang%20chủ/doraemon-new-series-tap-1.html">Vietsub</a>
+  </div>
+
+  <h3>Danh sách tập</h3>
+  <div class="ep-groups">
+    <a class="group-btn ep-active" href="#">Tập 1–100</a>
+    <a class="group-btn" href="#">Tập 101–200</a>
+    <a class="group-btn" href="#">Tập 201–300</a>
+    <a class="group-btn" href="#">Tập 301–400</a>
+    <a class="group-btn" href="#">Tập 401–500</a>
+  </div>
+
+  <div class="episodes">
+    <a class="ep-active" href="#">Tập 1</a>
+    <a href="#">Tập 2</a>
+    <a href="#">Tập 3</a>
+    <a href="#">Tập 4</a>
+    <a href="#">Tập 5</a>
+    <a href="#">Tập 6</a>
+    <a href="#">Tập 7</a>
+    <a href="#">Tập 8</a>
+    <a href="#">Tập 9</a>
+    <a href="#">Tập 10</a>
+  </div>
+
+  <h3 style="margin-top:30px">Giới thiệu phim</h3>
+  <p>
+    Doraemon New Series xoay quanh chú mèo máy đến từ tương lai
+    cùng Nobita và những bảo bối thần kỳ…
+  </p>
+
+</div>
+
+<script>
+const poster = document.getElementById("poster");
+const playBtn = document.getElementById("playBtn");
+const iframe = document.getElementById("videoFrame");
+
+function playVideo(){
+  poster.style.display = "none";
+  playBtn.style.display = "none";
+  iframe.style.pointerEvents = "auto";
+  iframe.src += (iframe.src.includes("?") ? "&" : "?") + "autoplay=1";
+}
+
+poster.onclick = playVideo;
+playBtn.onclick = playVideo;
+</script>
+
+</body>
+</html>
